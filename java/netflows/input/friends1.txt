@@ -1,0 +1,7 @@
+Chandler:Monica,Rachel,Phoebe
+Joey:Rachel,Phoebe,Monica
+Ross:Rachel,Phoebe,Monica
+
+Monica:Chandler,Joey,Ross
+Phoebe:Joey,Ross,Chandler
+Rachel:Ross,Joey,Chandler

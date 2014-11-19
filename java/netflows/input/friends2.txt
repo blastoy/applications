@@ -1,0 +1,10 @@
+George:Charlotte,Carrie,Miranda,Samantha
+Jerry:Miranda,Samantha,Carrie,Charlotte
+Kramer:Samantha,Charlotte,Carrie,Miranda
+Newman:Samantha,Charlotte,Miranda,Carrie
+
+Carrie:Newman,Jerry,Kramer,George
+Charlotte:Jerry,George,Kramer,Newman
+Miranda:Newman,Jerry,Kramer,George
+Samantha:Jerry,Kramer,George,Newman
+
