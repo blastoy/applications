@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Navigation" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sG9-ym-oYw">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Stopwatch" id="Tox-h8-Quc">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="play" id="0qL-4W-10W">
+                                            <connections>
+                                                <action selector="actionButtonPressed:" destination="vXZ-lx-hvc" id="Yxx-U2-QES"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="pause" id="ohJ-h6-6ZO">
+                                            <connections>
+                                                <action selector="pauseButtonPressed:" destination="vXZ-lx-hvc" id="Zf4-RZ-mFo"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FXM-Ld-ofi">
+                                <rect key="frame" x="181" y="122" width="238" height="135"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="238" id="G1W-jt-i2L"/>
+                                    <constraint firstAttribute="height" constant="135" id="hDc-Ib-sE4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="75"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aii-y0-aPS">
+                                <rect key="frame" x="280" y="265" width="40" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="QWh-S0-SWP"/>
+                                    <constraint firstAttribute="width" constant="40" id="zmK-3y-04o"/>
+                                </constraints>
+                                <state key="normal" title="Reset">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="1L4-mk-zxO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Aii-y0-aPS" firstAttribute="top" secondItem="FXM-Ld-ofi" secondAttribute="bottom" constant="8" id="0aG-sb-ixm"/>
+                            <constraint firstAttribute="centerX" secondItem="Aii-y0-aPS" secondAttribute="centerX" id="Dh5-Qv-uPT"/>
+                            <constraint firstAttribute="centerX" secondItem="FXM-Ld-ofi" secondAttribute="centerX" id="Th2-Fd-F0z"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sG9-ym-oYw" secondAttribute="trailing" constant="-16" id="X0Q-Wa-mez"/>
+                            <constraint firstItem="sG9-ym-oYw" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="YPf-Mf-tG7"/>
+                            <constraint firstItem="sG9-ym-oYw" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="p9w-sK-NXj"/>
+                            <constraint firstItem="FXM-Ld-ofi" firstAttribute="top" secondItem="sG9-ym-oYw" secondAttribute="bottom" constant="58" id="wzR-se-Byc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="timerLabel" destination="FXM-Ld-ofi" id="szY-lb-KXD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
